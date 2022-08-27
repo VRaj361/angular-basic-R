@@ -1,0 +1,8 @@
+<h2>Signup</h2>
+Name: <input type="text" class [(ngModel)]="firstName"/><br/><br/>
+Author: <input type="text" [(ngModel)]="author"/><br/><br/>
+Category: <input type="text" [(ngModel)]="category"/><br/><br/>
+Price: <input type="text" [(ngModel)]="price"/>
+<input type="button" value="Signup" (click)="signup()" />
+
+{{name}}<!-- for printing TS to html-->
