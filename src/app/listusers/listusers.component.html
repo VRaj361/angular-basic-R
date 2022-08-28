@@ -1,1 +1,17 @@
 <h1>List User</h1>
+
+<table class="table table-bordered">
+  <tr>
+      <td>Name</td>
+      <td>Category</td>
+      <td>Author</td>
+      <td>Price</td>
+  </tr>
+
+  <tr *ngFor="let u of users">
+      <td>{{u.name}}</td>
+      <td>{{u.category}}</td>
+      <td>{{u.author}}</td>
+      <td>{{u.price}}</td>
+  </tr>
+</table>
