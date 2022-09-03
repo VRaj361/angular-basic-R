@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -9,6 +10,10 @@ export class UserService {
   constructor(private httpClient:HttpClient) { }
 
   getAllBooks():Observable<any>{
-    return this.httpClient.get("https://vrajapi.herokuapp.com/book")
+    return this.httpClient.get(environment.url+"/book")
+  }
+
+  deleteParticularBook(bookId:any):Observable<any>{
+    return this.httpClient.delete(environment.url+"/book/"+bookId)
   }
 }

@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -9,6 +10,6 @@ export class SessionService {
 
   signupApi(user: any) {
     //accept the user and datatype will be any
-    return this.httpClient.post('https://vrajapi.herokuapp.com/book', user)
+    return this.httpClient.post(environment.url+'/book', user)
   }
 }

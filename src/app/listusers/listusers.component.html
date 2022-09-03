@@ -6,12 +6,18 @@
       <td>Category</td>
       <td>Author</td>
       <td>Price</td>
+      <td>Delete Book</td>
   </tr>
 
   <tr *ngFor="let u of users">
+
       <td>{{u.name}}</td>
       <td>{{u.category}}</td>
       <td>{{u.author}}</td>
       <td>{{u.price}}</td>
+      <td>
+          <button type ="button" class=" btn-danger btn  text-black" (click)="deleteBook(u.bookId)">Delete</button>  |
+          <a routerLink="/edituser/{{u.bookId}}" class="fakelink btn btn-info">Edit </a>
+      </td>
   </tr>
 </table>
