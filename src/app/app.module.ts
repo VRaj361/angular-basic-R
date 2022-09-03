@@ -1,3 +1,4 @@
+import { EditBookComponent } from './edit-book/edit-book.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,7 +19,8 @@ import { ListusersComponent } from './listusers/listusers.component';
     SignupComponent,
     LoginComponent,
     NotfoundComponent,
-    ListusersComponent
+    ListusersComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,

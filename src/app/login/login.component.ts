@@ -20,12 +20,10 @@ export class LoginComponent implements OnInit {
 
   login(){
     let user = {"author":this.author,"firstName":this.name};
-    console.log(user)
     this.userservice.getAllBooks().subscribe(res=>{
 
       this.users = res;
       this.users.map((e)=>{
-        console.log(e)
         if(this.author === e.author && this.name === e.name){
           this.toastr.success("Login Successfully");
           this.router.navigateByUrl("/listuser")

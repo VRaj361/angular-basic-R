@@ -1,6 +1,6 @@
-<h1>List User</h1>
+<h1>List User</h1>ng
 
-<table class="table table-bordered">
+<table class="table table-borderd">
   <tr>
       <td>Name</td>
       <td>Category</td>
@@ -16,8 +16,8 @@
       <td>{{u.author}}</td>
       <td>{{u.price}}</td>
       <td>
-          <button type ="button" class=" btn-danger btn  text-black" (click)="deleteBook(u.bookId)">Delete</button>  |
-          <a routerLink="/edituser/{{u.bookId}}" class="fakelink btn btn-info">Edit </a>
+          <button type ="button" class="btn btn-primary  " (click)="deleteBook(u.bookId)">Delete</button>  |
+          <a routerLink="/editbook/{{u.bookId}}" class=" btn btn-info">Edit </a>
       </td>
   </tr>
 </table>

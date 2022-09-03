@@ -16,4 +16,9 @@ export class UserService {
   deleteParticularBook(bookId:any):Observable<any>{
     return this.httpClient.delete(environment.url+"/book/"+bookId)
   }
+
+  updateParticularBook(bookId:any,price:any):Observable<any>{
+
+    return this.httpClient.put(environment.url+"/book/?bookId="+bookId+"&price="+price,{});
+  }
 }

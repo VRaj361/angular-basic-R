@@ -25,7 +25,6 @@ export class SignupComponent implements OnInit {
       console.log(this.price);
       const user={"author":this.author,"name":this.firstName,"category":this.category,"price":this.price};
       this.sessionService.signupApi(user).subscribe(response=>{
-        console.log(response);
         this.toastr.success("Book Added");
         this.router.navigateByUrl("/listuser");
       },error=>{

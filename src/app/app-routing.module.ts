@@ -1,3 +1,5 @@
+import { EditBookComponent } from './edit-book/edit-book.component';
+
 import { ListusersComponent } from './listusers/listusers.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +13,7 @@ const routes: Routes = [
   { path: "signup", component:SignupComponent },
   {path:"",component:LoginComponent},
   {path:"listuser", component:ListusersComponent},
+  {path:"editbook/:bookId",component:EditBookComponent},
   {path:"**",component:NotfoundComponent}
 ];
 @NgModule({
