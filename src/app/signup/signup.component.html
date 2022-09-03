@@ -1,8 +1,42 @@
-<h2>Signup</h2>
-Name: <input type="text" class [(ngModel)]="firstName"/><br/><br/>
+
+<!-- Name: <input type="text"  [(ngModel)]="firstName"/><br/><br/>
 Author: <input type="text" [(ngModel)]="author"/><br/><br/>
 Category: <input type="text" [(ngModel)]="category"/><br/><br/>
 Price: <input type="text" [(ngModel)]="price"/>
 <input type="button" value="Signup" (click)="signup()" />
 
-{{name}}<!-- for printing TS to html-->
+{{name}}for printing TS to html -->
+
+<div class="container">
+  <h2>Signup</h2>
+  <!-- Pills content -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" [(ngModel)]="firstName" class="form-control" />
+          <label class="form-label" >Name</label>
+        </div>
+        <div class="form-outline mb-4">
+          <input type="text" [(ngModel)]="author"  class="form-control" />
+          <label class="form-label" >Author</label>
+        </div>
+        <div class="form-outline mb-4">
+          <input type="text" [(ngModel)]="category"  class="form-control" />
+          <label class="form-label">Category</label>
+        </div>
+        <div class="form-outline mb-4">
+          <input type="text" [(ngModel)]="price" class="form-control" />
+          <label class="form-label">Price</label>
+        </div>
+        <!-- Submit button -->
+        <button type="button" (click)="signup()" class="btn btn-primary btn-block mb-4">
+          Sign up</button>
+        <!-- Register buttons -->
+
+    </div>
+
+  </div>
+  <!-- Pills content -->
+</div>

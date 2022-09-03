@@ -14,19 +14,11 @@ export class SignupComponent implements OnInit {
   category: string = ""
   price: string=""
 
-
-
-
   constructor(private sessionService:SessionService,private toastr:ToastrService,private router:Router) { }
   //dependency inject in component class using constructor
 
-
-
-
-
   ngOnInit(): void {}
-    signup
-    () {
+    signup() {
       console.log(this.firstName);
       console.log(this.author);
       console.log(this.category);

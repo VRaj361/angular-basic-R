@@ -12,7 +12,6 @@ export class ListusersComponent implements OnInit {
   users: Array<any> = []
   ngOnInit(): void {
     this.userService.getAllBooks().subscribe(response=>{
-      console.log(response);
       this.users=response;
     })
   }
