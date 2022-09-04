@@ -18,12 +18,16 @@ export class EditBookComponent implements OnInit {
     this.bookId = this.routeUrl.snapshot.params['bookId'];
     this.userService.getAllBooks().subscribe(res=>{
         this.books=res
+        console.log(res)
+        this.books.map((e)=>{
+          // console.log(e.bookId+" "+this.bookId)
+          if(e.bookId == this.bookId){
+            this.price = e.price;
+            console.log("inner map")
+          }
+        })
     })
-    this.books.map((e)=>{
-      if(e.Bookid === this.bookId){
-        this.price = e.price;
-      }
-    })
+
   }
   editBook(){
     // let book={"bookId":this.bookId,"price":this.price};

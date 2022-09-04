@@ -2,12 +2,12 @@
   <h2>Edit Book</h2>
 
   <!-- Pills content -->
-  <div class="tab-content">
+  <div class="tab-content" *ngIf="price">
     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
 
         <!-- name input -->
         <div class="form-outline mb-4">
-          <input type="text" [(ngModel)]="price"  class="form-control" value={{price}}/>
+          <input type="text" [(ngModel)]="price"  class="form-control" />
           <label class="form-label" >Book Price</label>
         </div>
 
