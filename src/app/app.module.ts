@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ToastrModule } from 'ngx-toastr';
 import { ListusersComponent } from './listusers/listusers.component';
+import { SidebarComponent } from './user/sidebar/sidebar.component';
+import { HeaderComponent } from './user/header/header.component';
+import { LogoutComponent } from './logout/logout.component';
+import { UserLayoutComponent } from './user-layout/user-layout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ListusersComponent } from './listusers/listusers.component';
     LoginComponent,
     NotfoundComponent,
     ListusersComponent,
-    EditBookComponent
+    EditBookComponent,
+    SidebarComponent,
+    HeaderComponent,
+    LogoutComponent,
+    UserLayoutComponent
   ],
   imports: [
     BrowserModule,

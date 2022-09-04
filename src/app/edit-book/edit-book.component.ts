@@ -32,7 +32,7 @@ export class EditBookComponent implements OnInit {
     this.userService.updateParticularBook(this.bookId,this.price).subscribe(res=>{
       console.log(res);
       this.toaster.success("Update Successfully");
-      this.router.navigateByUrl("/listuser");
+      this.router.navigateByUrl("/user/listuser");
     },err=>{
       console.log(err)
     })

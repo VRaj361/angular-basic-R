@@ -1,3 +1,4 @@
+
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -20,5 +21,13 @@ export class UserService {
   updateParticularBook(bookId:any,price:any):Observable<any>{
 
     return this.httpClient.put(environment.url+"/book/?bookId="+bookId+"&price="+price,{});
+  }
+
+  generateAuthToken():Observable<any>{
+    return this.httpClient.get("http://localhost:9999/getanytoken",{responseType:"text"})
+  }//for user api in login
+
+  checkUserData(user:any):Observable<any>{
+    return this.httpClient.post("http://localhost:9999/logincus",user);
   }
 }
