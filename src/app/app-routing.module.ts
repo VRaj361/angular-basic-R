@@ -1,3 +1,4 @@
+import { PipelineComponent } from './user/pipeline/pipeline.component';
 import { LoginCheckGuard } from './login-check.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { UserLayoutComponent } from './user-layout/user-layout.component';
@@ -16,10 +17,12 @@ const routes: Routes = [
   { path: "signup", component: SignupComponent },
   { path: "", component: LoginComponent },
   { path: "logout", component: LogoutComponent },
+
   {
     path: "user", component: UserLayoutComponent, children:[
       { path: "listuser", component: ListusersComponent },
       { path: "editbook/:bookId", component: EditBookComponent },
+      { path:"pipeline",component:PipelineComponent}
     ],canActivate:[LoginCheckGuard]
   },
   { path: "**", component: NotfoundComponent }

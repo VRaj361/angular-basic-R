@@ -1,0 +1,27 @@
+User => {{ user  }}
+<br>
+User => {{ user | uppercase }}
+<br>
+User => {{ user | lowercase  }}
+<br><br>
+Price => {{price}}
+<br>
+Price => {{price | currency }}
+<br>
+Price => {{price | currency:'INR' }}
+<br><br>
+CurrentDate => {{currentDate}}
+<br>
+CurrentDate => {{currentDate | date }}
+<br>
+CurrentDate => {{currentDate | date:"d/M/y" }}
+<br><br>
+Number => {{num}}
+<br>
+Number => {{num | number}}
+<!-- <br>
+Number => {{num | number:'6.2-2':'fr-FR'}} not working
+<br> -->
+<br><br>
+
+{{ price | usdToInr  | currency:'INR'}}

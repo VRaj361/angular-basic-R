@@ -16,6 +16,8 @@ import { SidebarComponent } from './user/sidebar/sidebar.component';
 import { HeaderComponent } from './user/header/header.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UserLayoutComponent } from './user-layout/user-layout.component';
+import { PipelineComponent } from './user/pipeline/pipeline.component';
+import { UsdToInrPipe } from './usd-to-inr.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { UserLayoutComponent } from './user-layout/user-layout.component';
     SidebarComponent,
     HeaderComponent,
     LogoutComponent,
-    UserLayoutComponent
+    UserLayoutComponent,
+    PipelineComponent,
+    UsdToInrPipe
   ],
   imports: [
     BrowserModule,
